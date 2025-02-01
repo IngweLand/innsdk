@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <AssemblyName>Ingweland.Fog.Inn.Models.Core</AssemblyName>
+        <RootNamespace>Ingweland.Fog.Inn.Models.Core</RootNamespace>
+        <Configurations>Debug;Release;Release_gb;Release_tavern;Release_clan;Release_autofetcher</Configurations>
+        <Platforms>AnyCPU</Platforms>
+        <LangVersion>12</LangVersion>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Release_autofetcher' ">
+        <Optimize Condition=" '$(Optimize)' == '' ">true</Optimize>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.3"/>
+    </ItemGroup>
+
+</Project>
